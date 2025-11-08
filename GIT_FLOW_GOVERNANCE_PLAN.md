@@ -594,35 +594,345 @@ git branch -d hotfix/critical-bug-fix
 
 ## 11. Tooling & Integrations
 
-### Recommended Tools
+### Free Tools Stack (100% Free Tier Available)
 
-**Code Quality:**
-- **Laravel**: Laravel Pint, PHPStan, Larastan, PHP_CodeSniffer
-- **Angular**: ESLint, Prettier, TSLint (deprecated), SonarQube
-- **Both**: SonarQube/SonarCloud for comprehensive analysis
+#### Your Current Tools ✅
+- **SonarCloud** - Already integrated (code quality, security, code smells)
+- **CodeRabbit AI** - Already integrated (AI-powered code reviews)
 
-**Testing:**
-- **Laravel**: PHPUnit, Pest, Laravel Dusk (browser tests)
-- **Angular**: Jasmine/Jest, Karma, Cypress/Playwright
+#### Additional Free Tools to Add
 
-**Security:**
-- **Laravel**: Composer audit, Snyk, RIPS
-- **Angular**: npm audit, Snyk, OWASP Dependency-Check
-- **Both**: GitHub Dependabot, GitGuardian (secret scanning)
+### 1. Code Quality & Analysis
 
-**CI/CD:**
-- **Primary**: GitHub Actions (integrated)
-- **Alternatives**: Jenkins, GitLab CI, CircleCI
+**Laravel Projects:**
+- ✅ **Laravel Pint** (FREE) - Official Laravel code style fixer
+  - Built on PHP-CS-Fixer
+  - Zero config needed
+  - `composer require laravel/pint --dev`
 
-**Project Management Integration:**
-- Link commits/PRs to JIRA/Linear/GitHub Issues
-- Automated status updates
-- Release notes generation
+- ✅ **Larastan** (FREE) - Laravel-specific PHPStan wrapper
+  - Static analysis tailored for Laravel
+  - Understands Eloquent, Facades, etc.
+  - `composer require nunomaduro/larastan --dev`
 
-**Monitoring:**
-- **Performance**: New Relic, Datadog, Sentry
-- **Errors**: Sentry, Rollbar, Bugsnag
-- **Logs**: ELK Stack, Splunk, CloudWatch
+- ✅ **PHPStan** (FREE) - PHP Static Analysis
+  - Catches bugs without running code
+  - Configurable strictness levels
+  - Works with baseline for legacy code
+
+- ✅ **PHP_CodeSniffer** (FREE) - PHP coding standards
+  - Alternative to Pint
+  - More configurable
+
+- ✅ **PHPMetrics** (FREE) - Code complexity metrics
+  - Visual complexity reports
+  - Identifies hotspots
+  - `composer require phpmetrics/phpmetrics --dev`
+
+**Angular Projects:**
+- ✅ **ESLint** (FREE) - JavaScript/TypeScript linting
+  - Industry standard
+  - Thousands of rules available
+
+- ✅ **Prettier** (FREE) - Code formatting
+  - Opinionated formatter
+  - Eliminates style debates
+
+- ✅ **Angular ESLint** (FREE) - Angular-specific rules
+  - Replaces deprecated TSLint
+  - Official Angular linting
+
+- ✅ **Stylelint** (FREE) - CSS/SCSS linting
+  - Catches CSS errors
+  - Enforces conventions
+
+### 2. Security Scanning
+
+- ✅ **GitHub Dependabot** (FREE - GitHub Native)
+  - Automated dependency updates
+  - Security vulnerability alerts
+  - Auto-generates PRs for updates
+  - **Setup: Enable in repo settings**
+
+- ✅ **GitHub CodeQL** (FREE - GitHub Native)
+  - Semantic code analysis
+  - Finds security vulnerabilities
+  - Supports PHP, JavaScript, TypeScript
+  - **Setup: Add `.github/workflows/codeql.yml`**
+
+- ✅ **Snyk** (FREE tier: unlimited tests for open source)
+  - Dependency vulnerability scanning
+  - License compliance
+  - Container scanning
+  - **Integration: GitHub App**
+
+- ✅ **GitGuardian** (FREE tier: public repos)
+  - Secret detection in code
+  - Prevents credential leaks
+  - Real-time scanning
+
+- ✅ **Composer Audit** (FREE - Built-in)
+  - Laravel: `composer audit`
+  - Checks for known vulnerabilities
+
+- ✅ **npm audit** (FREE - Built-in)
+  - Angular: `npm audit`
+  - Vulnerability scanning for Node packages
+
+### 3. Test Coverage
+
+- ✅ **Codecov** (FREE tier: unlimited public repos)
+  - Coverage reports and tracking
+  - PR comments with coverage diff
+  - Beautiful visualizations
+  - **Integration: GitHub App**
+
+- ✅ **Coveralls** (FREE tier: unlimited public repos)
+  - Alternative to Codecov
+  - Coverage tracking over time
+  - Supports PHP and JavaScript
+
+- ✅ **PHPUnit** (FREE) - Laravel testing
+  - Built into Laravel
+  - Unit and feature tests
+
+- ✅ **Pest** (FREE) - Modern PHP testing
+  - Elegant syntax
+  - Built on PHPUnit
+  - `composer require pestphp/pest --dev`
+
+- ✅ **Jest** (FREE) - Angular unit testing
+  - Fast and modern
+  - Snapshot testing
+  - Built-in coverage
+
+### 4. Performance & Monitoring
+
+**Angular Specific:**
+- ✅ **Lighthouse CI** (FREE)
+  - Performance audits in CI
+  - Tracks performance over time
+  - Accessibility checks
+  - **Setup: GitHub Action available**
+
+- ✅ **Bundlesize** (FREE)
+  - Monitor bundle size
+  - Fail CI if size increases
+  - `npm install bundlesize --save-dev`
+
+- ✅ **Bundle Analyzer** (FREE)
+  - Visualize bundle composition
+  - Find large dependencies
+  - `npm install webpack-bundle-analyzer --save-dev`
+
+**Laravel Specific:**
+- ✅ **Laravel Telescope** (FREE)
+  - Development debugging tool
+  - Request/query monitoring
+  - Built-in to Laravel
+
+**Both:**
+- ✅ **Sentry** (FREE tier: 5K events/month)
+  - Error tracking
+  - Performance monitoring
+  - Release tracking
+  - **Integration: Official SDKs**
+
+### 5. Code Review & Collaboration
+
+- ✅ **CodeRabbit AI** (Your existing tool)
+  - AI-powered PR reviews
+  - Contextual suggestions
+
+- ✅ **GitHub Pull Request Reviews** (FREE - Native)
+  - Built-in code review
+  - Conversation threads
+  - Review requests
+
+- ✅ **Better Code Hub** (FREE - Open Source)
+  - 10 guidelines for maintainable code
+  - GitHub integration
+
+- ✅ **DeepSource** (FREE tier: unlimited private repos)
+  - Automated code reviews
+  - Supports PHP, JavaScript, Python
+  - Security and performance checks
+  - **Integration: GitHub App**
+
+- ✅ **Codacy** (FREE tier: 1 private repo, unlimited public)
+  - Automated code reviews
+  - Code quality metrics
+  - Supports 30+ languages
+
+### 6. Git Hooks & Local Automation
+
+- ✅ **Husky** (FREE)
+  - Git hooks made easy
+  - Run tests/linting before commit
+  - `npm install husky --save-dev`
+
+- ✅ **lint-staged** (FREE)
+  - Run linters on staged files only
+  - Perfect for incremental linting
+  - `npm install lint-staged --save-dev`
+
+- ✅ **Commitlint** (FREE)
+  - Enforce commit message conventions
+  - Works with Husky
+  - `npm install @commitlint/cli --save-dev`
+
+- ✅ **GrumPHP** (FREE - Laravel)
+  - PHP git hooks
+  - Run tests/linters pre-commit
+  - `composer require phpro/grumphp --dev`
+
+### 7. Documentation
+
+- ✅ **GitHub Pages** (FREE)
+  - Host documentation
+  - Auto-deploy from repo
+
+- ✅ **Read the Docs** (FREE)
+  - Documentation hosting
+  - Auto-build from repo
+
+- ✅ **Docsify** (FREE)
+  - Markdown documentation site
+  - No build process needed
+
+### 8. CI/CD
+
+- ✅ **GitHub Actions** (FREE tier: 2,000 minutes/month)
+  - Native GitHub integration
+  - Unlimited for public repos
+  - Matrix builds
+  - **Our primary choice**
+
+- ✅ **CircleCI** (FREE tier: 6,000 build minutes/month)
+  - Alternative to GitHub Actions
+  - Docker-based builds
+
+### 9. Project Management
+
+- ✅ **GitHub Projects** (FREE - Native)
+  - Kanban boards
+  - Issue tracking
+  - Automation rules
+
+- ✅ **GitHub Issues** (FREE - Native)
+  - Bug tracking
+  - Feature requests
+  - Labels and milestones
+
+- ✅ **GitHub Milestones** (FREE - Native)
+  - Release planning
+  - Progress tracking
+
+### 10. Additional Utilities
+
+- ✅ **Dependabot** (FREE - Native)
+  - Automated dependency updates
+  - Security patches
+
+- ✅ **Release Drafter** (FREE - GitHub Action)
+  - Auto-generate release notes
+  - Based on PR labels
+
+- ✅ **All Contributors** (FREE)
+  - Recognize contributors
+  - Auto-update README
+
+- ✅ **Mergify** (FREE tier: 1 repo)
+  - Auto-merge PRs
+  - Advanced merge rules
+
+---
+
+### Recommended Free Stack for Your Team
+
+Here's what I recommend adding to complement SonarCloud + CodeRabbit AI:
+
+#### Immediate Priority (Week 1-2)
+
+**Laravel:**
+```bash
+composer require --dev laravel/pint
+composer require --dev nunomaduro/larastan
+composer require --dev pestphp/pest
+```
+
+**Angular:**
+```bash
+npm install --save-dev @angular-eslint/eslint-plugin
+npm install --save-dev prettier eslint-config-prettier
+npm install --save-dev husky lint-staged
+npm install --save-dev @commitlint/cli @commitlint/config-conventional
+```
+
+**GitHub Apps to Enable:**
+1. GitHub Dependabot (Settings → Security → Enable)
+2. GitHub CodeQL (Add workflow file)
+3. Codecov (Install GitHub App)
+4. Snyk (Install GitHub App)
+5. DeepSource (Install GitHub App - optional, since you have SonarCloud)
+
+#### Secondary Priority (Week 3-4)
+
+- Lighthouse CI for Angular performance
+- Sentry for error tracking
+- Release Drafter for release notes
+- Git hooks (Husky + lint-staged)
+
+---
+
+### Tool Integration Architecture
+
+```
+Developer writes code
+    ↓
+Git Hooks (Husky) → Run local linting/tests
+    ↓
+Push to GitHub
+    ↓
+GitHub Actions Triggered:
+    ├─ Laravel Pint/Larastan (changed files only)
+    ├─ PHPUnit/Pest tests
+    ├─ ESLint + Prettier (Angular)
+    ├─ Jest unit tests (Angular)
+    ├─ CodeQL security scan
+    ├─ Snyk dependency scan
+    ├─ Codecov coverage report
+    └─ SonarCloud analysis
+    ↓
+CodeRabbit AI reviews PR
+    ↓
+Human code review
+    ↓
+All checks pass → Merge
+    ↓
+Deploy (GitHub Actions)
+    ↓
+Monitor (Sentry for errors)
+```
+
+---
+
+### Cost Breakdown (All Free)
+
+| Tool | Free Tier | What You Get |
+|------|-----------|--------------|
+| GitHub Actions | 2,000 min/month | Enough for ~50-100 PRs/month |
+| SonarCloud | Unlimited | For public repos (existing) |
+| CodeRabbit AI | Varies | (Your existing plan) |
+| Codecov | Unlimited | For public repos |
+| Snyk | Unlimited | For open source |
+| Dependabot | Unlimited | GitHub native |
+| CodeQL | Unlimited | GitHub native |
+| Sentry | 5K events/month | Good for small teams |
+| DeepSource | Unlimited | For private repos |
+| All other tools | Unlimited | Completely free |
+
+**Total Cost: $0/month** ✅
 
 ---
 
