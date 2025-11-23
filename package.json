@@ -1,0 +1,38 @@
+{
+  "name": "github-team-tracker",
+  "version": "1.0.0",
+  "description": "GitHub team activity tracking and KPI monitoring tool",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "track": "tsx src/index.ts",
+    "report": "tsx src/index.ts --report",
+    "dashboard": "tsx src/index.ts --dashboard"
+  },
+  "keywords": [
+    "github",
+    "tracking",
+    "kpi",
+    "team",
+    "analytics",
+    "metrics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.3",
+    "date-fns": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
